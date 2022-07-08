@@ -16,6 +16,7 @@ section{
     align-items: center;
     height: 100vh;
     flex-direction: column;
+    width: 90vw;
 }
 h1{
     text-shadow: rgb(205, 193, 230) 1px 1px 5px;
