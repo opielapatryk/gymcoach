@@ -1,0 +1,14 @@
+{"users": [
+    {
+        "userid": "1",
+        "nickname": "patryk",
+        "email": "patryk.opiela02@gmail.com",
+        "password": "dobrehaslo"
+    },
+    {
+        "userid": "2",
+        "nickname": "danio",
+        "email": "daniel.opiela@gmail.com",
+        "password": "dobrehaslo"
+    }
+]}
