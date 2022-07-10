@@ -9,13 +9,13 @@
 </head>
 <body>
     <?php 
-            $conn = mysqli_connect("localhost", "root", "", "gymcoach");
+            $conn = mysqli_connect("sql11.freemysqlhosting.net", "sql11505243", "Aj2VNWqcEA", "sql11505243");
             if (isset($_POST['nickname']) && isset($_POST['email']) && isset($_POST['pass']))
             {  
                 $nickname = $_POST['nickname'];
                 $email = $_POST['email'];
                 $pass = $_POST['pass'];
-                $dodaj = "INSERT INTO user (nickname, email, password) VALUES ('$nickname', '$email','$pass')";
+                $dodaj = "INSERT INTO users (nickname, email, password) VALUES ('$nickname', '$email','$pass')";
                 $qu = mysqli_query($conn, $dodaj);
             }
             mysqli_close($conn);
