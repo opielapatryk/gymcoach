@@ -4,12 +4,24 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <title>Gym Coach</title>
 </head>
 <body>
+    <?php 
+            $conn = mysqli_connect("localhost", "root", "", "gymcoach");
+            if (isset($_POST['nickname']) && isset($_POST['email']) && isset($_POST['pass']))
+            {  
+                $nickname = $_POST['nickname'];
+                $email = $_POST['email'];
+                $pass = $_POST['pass'];
+                $dodaj = "INSERT INTO user (nickname, email, password) VALUES ('$nickname', '$email','$pass')";
+                $qu = mysqli_query($conn, $dodaj);
+            }
+            mysqli_close($conn);
+            ?>
     <section>
-        <h1>Siema
+        <h1>
             Welcome On Gym Coach.. <br>
             &nbsp;&nbsp;&nbsp; Your Virtual Training Planner! <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please Sing In!
