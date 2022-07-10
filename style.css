@@ -25,6 +25,10 @@ h1{
     font-size: 3em;
     font-weight: 500;
 }
+a{
+    text-decoration: none;
+}
+
 form{
     width: 400px;
     height: 40vh;

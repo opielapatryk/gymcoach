@@ -9,13 +9,13 @@
 </head>
 <body>
     <section>
-        <h1>Siema
+        <h1>
             Welcome On Gym Coach.. <br>
             &nbsp;&nbsp;&nbsp; Your Virtual Training Planner! <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please Sing In!
-            Or Log In Here -> <button class="log-in"><h1>Log In</h1></button>
+            Or Log In Here -> <button class="log-in"><a href="./login.php"><h1>Log In</h1></a></button>
         </h1>
-        <form action="./users.json" method="POST">
+        <form action="./login.php" method="POST">
             <input type="text" id="nickname" placeholder="Nickname"><br>
             <input type="email" id="email" placeholder="Email"><br>
             <input type="password" id="password" placeholder="Password"><br>
