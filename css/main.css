@@ -100,6 +100,7 @@ th {
 td {
     width: 100%;
     border: 1px solid;
+    padding: 1em;
 }
 
 tr {
@@ -109,7 +110,7 @@ tr {
 
 button {
     background: white;
-    width: 100%;
+    transition: background, 1s;
     padding: .2em;
     margin-top: 1em;
     border-radius: .5em;
@@ -117,5 +118,34 @@ button {
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(rgb(0, 115, 255),green);
+    transition: background, 1s;
+    color: white;
+}
+
+input {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    letter-spacing: .1em;
+    text-align: center;
+}
+
+::placeholder {
+    background: linear-gradient(rgb(0, 115, 255),
+            green);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    opacity: .8;
+}
+
+input[type="submit"] {
+    color: white;
+    background: linear-gradient(to right, rgb(0, 115, 255), green);
+    cursor: pointer;
+}
+
+article{
+    margin-top: 1em;
 }
