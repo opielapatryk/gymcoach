@@ -43,6 +43,5 @@ deleteTable.addEventListener('click',()=>main.innerHTML = '')
 
 //******* EDIT CELL FUNCTION*******//
 const editCell = function(td){
-    td.innerHTML = 'write some txt'
+    td.innerHTML = '<input type="text" placeholder="write" style="width:100%;height:100%;border:none;">'
 }
-

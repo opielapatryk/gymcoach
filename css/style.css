@@ -8,7 +8,7 @@
 body{
     display: flex;
     justify-content: center;
-    background: linear-gradient(to right, rgb(233, 235, 255), rgb(210, 249, 209));
+    background: linear-gradient(to right, rgb(233, 235, 255), rgb(224, 255, 224));
 }
 section{
     display: flex;

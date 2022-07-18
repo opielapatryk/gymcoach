@@ -12,7 +12,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, rgb(233, 235, 255), rgb(210, 249, 209));
+    background: linear-gradient(to right, rgb(233, 235, 255), rgb(224, 255, 224));
 }
 
 /* nav */
@@ -98,9 +98,9 @@ th {
 }
 
 td {
-    width: 100%;
+    width: 3vw;
+    height: 3vw;
     border: 1px solid;
-    padding: 1em;
 }
 
 tr {
