@@ -10,7 +10,11 @@ h1.forEach((e)=>{
 const main = document.querySelector('main')
 const generateRows = document.querySelector('.generate-rows')
 const generateCols = document.querySelector('.generate-cols')
-const generateSubmit = document.querySelector('.generate-submit').addEventListener("click",()=>generateTable(parseInt(generateRows.value),parseInt(generateCols.value)))
+const generateSubmit = document.querySelector('.generate-submit').addEventListener("click",()=>{
+    if(parseInt(generateRows.value) > 0 && parseInt(generateCols.value) > 0){
+        generateTable(parseInt(generateRows.value),parseInt(generateCols.value))
+    }
+})
 
 //generate table function
 const generateTable = function(rowsQty, colsQty){
@@ -21,8 +25,8 @@ const generateTable = function(rowsQty, colsQty){
         const tr = document.createElement('tr')
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
+            td.addEventListener("click",()=>editCell(td))  //edit cell function
             tr.appendChild(td)
-            td.innerText = 'xd'
         }
         tbody.appendChild(tr)
     }   
@@ -36,3 +40,9 @@ const generateTable = function(rowsQty, colsQty){
 //******* DELETE TABLE *******//
 const deleteTable = document.querySelector(".delete-table")
 deleteTable.addEventListener('click',()=>main.innerHTML = '')
+
+//******* EDIT CELL FUNCTION*******//
+const editCell = function(td){
+    td.innerHTML = 'write some txt'
+}
+
