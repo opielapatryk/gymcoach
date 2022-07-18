@@ -13,14 +13,12 @@
             Welcome On Gym Coach.. <br>
             &nbsp;&nbsp;&nbsp; Your Virtual Training Planner! <br>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Please Sing In!
-            Or Log In Here -> <button class="log-in"><a href="./login.php"><h1>Log In</h1></a></button>
+            Or Log In Here -> <button class="log-in"><a href="./login.html"><h1>Log In</h1></a></button>
         </h1>
-        <form action="./login.php" method="POST">
-            <input type="text" id="nickname" name="nickname" placeholder="Nickname"><br>
-            <input type="email" id="email" name="email" placeholder="Email"><br>
-            <input type="password" id="pass" name="pass" placeholder="Password"><br>
-            <input type="password" id="repeat" placeholder="Repeat Password"><br>
-            <input type="submit" value="Create Account">
+        <form action="./main.html" method="POST">
+            <input type="email" id="email" placeholder="Email" required><br>
+            <input type="password" id="password" placeholder="Password" required><br>
+            <input type="submit" value="Log In">
         </form>
     </section>
     <script src="./app.js" defer></script>
