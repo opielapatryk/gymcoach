@@ -26,17 +26,15 @@ const generateTable = function(rowsQty, colsQty){
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
             tr.appendChild(td)
-            td.innerHTML = '<input type="text" class="td-input">'
+            td.innerHTML = '<p contenteditable="true"></p>' //EDIT TABLE CELL
         }
         tbody.appendChild(tr)
     }   
     if(main.childElementCount === 0){
-        main.appendChild(table) 
-        return localStorage.setItem('table', main.innerHTML) //SAVE TABLE IN LOCAL STORAGE
+        return main.appendChild(table) 
     } else {
         main.innerHTML = ''
-        main.appendChild(table)
-        return localStorage.setItem('table', main.innerHTML) //SAVE TABLE IN LOCAL STORAGE
+        return main.appendChild(table) 
     }
 }
 
@@ -44,8 +42,12 @@ const generateTable = function(rowsQty, colsQty){
 const deleteTable = document.querySelector(".delete-table")
 deleteTable.addEventListener('click',()=>{
     main.innerHTML = ''
-    localStorage.setItem('table', main.innerHTML)
 })
+
+//SAVE TABLE IN LOCAL STORAGE
+setInterval(() => {
+    localStorage.setItem('table', main.innerHTML)
+}, 1000);
 
 //GET TABLE FROM LOCAL STORAGE
 let saved = localStorage.getItem('table');
@@ -63,16 +65,16 @@ function genPDF() {
     //******* FIX: PDF CUTS LAST ROW *******//
 
 //******* MOVING ON TABLE USING KEYS *******//
+let active = 0;
+document.querySelectorAll('td').forEach((e)=>{
+    e.addEventListener('click',()=>{
+        console.log(e.cellIndex) //log index of cell in row
+    })
+})
 
-//******* USE RMB TO OPEN OPTION TABLE *******//
+
+
+//******* CUSTOM CONTEXT MENU *******//
     //******* OPTION FOR CHANGING BACKGROUND COLOR *******//
     //******* OPTION FOR CHANGING TEXT COLOR *******//
-    //******* OPTION FOR SPAN COLS *******//
-    //******* OPTION FOR SPAN ROWS *******//
     //******* OPTION TO ADD EXCERCISE FROM LIST *******//
-
-//******* FIX BOTTOM BORDER ON TABLE *******//
-
-//******* CREATE SMALL BUTTON FOR ADDING ONE ADDITIONAL ROW AND ONE FOR COL *******//
-
-//******* CREATE SMALL BUTTON FOR DELETE ONE ROW AND ONE FOR DELTE ONE COL *******//
