@@ -25,15 +25,16 @@ const generateTable = function(rowsQty, colsQty){
         const tr = document.createElement('tr')
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
-            td.addEventListener("click",()=>editCell(td))  //edit cell function
             tr.appendChild(td)
+            td.innerHTML = '<input type="text" class="td-input">'
         }
         tbody.appendChild(tr)
     }   
     if(main.childElementCount === 0){
         return main.appendChild(table) 
     } else {
-        return null
+        main.innerHTML = ''
+        return main.appendChild(table)
     }
 }
 
@@ -41,7 +42,17 @@ const generateTable = function(rowsQty, colsQty){
 const deleteTable = document.querySelector(".delete-table")
 deleteTable.addEventListener('click',()=>main.innerHTML = '')
 
-//******* EDIT CELL FUNCTION*******//
-const editCell = function(td){
-    td.innerHTML = '<input type="text" placeholder="write" style="width:100%;height:100%;border:none;">'
-}
+//******* EXPORT TABLE TO PDF *******//
+
+//******* SAVE TABLE IN LOCAL STORAGE *******//
+
+//******* MOVING ON TABLE USING KEYS *******//
+
+//******* USE RMB TO OPEN OPTION TABLE *******//
+
+//******* FIX BOTTOM BORDER ON TABLE *******//
+
+//******* CREATE SMALL BUTTON FOR ADDING ONE ADDITIONAL ROW AND ONE FOR COL *******//
+
+//******* CREATE SMALL BUTTON FOR DELETE ONE ROW AND ONE FOR DELTE ONE COL *******//
+
