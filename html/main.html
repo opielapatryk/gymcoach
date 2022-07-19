@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <script src="../js/main.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <title>Training Schedule Creator</title>
 </head>
 <body>
@@ -138,7 +139,10 @@
             <input class="generate-cols" type="number" placeholder="How many cols?">
             <input class="generate-submit" type="submit" value="Generate Table">
         </article>
-        <button class="delete-table">Delete Table</button>
+        <export>
+            <button class="delete-table">Delete Table</button>
+            <button class="export-table">Export To PDF</button>
+        </export>
     </section>
 </body>
 </html>

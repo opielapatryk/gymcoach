@@ -1,16 +1,16 @@
-//******* NAVIGATION MENU *******//
+//NAVIGATION MENU
 const h1 = document.querySelectorAll('.h1')
 h1.forEach((e)=>{
     e.addEventListener('click',()=>{
         e.nextSibling.nextSibling.style.display !== 'block' ? e.nextSibling.nextSibling.style.display = 'block' : e.nextSibling.nextSibling.style.display = 'none'
     })
 })
-//******* GENERATE TABLE *******//
+//GENERATE TABLE 
 //consts
 const main = document.querySelector('main')
 const generateRows = document.querySelector('.generate-rows')
 const generateCols = document.querySelector('.generate-cols')
-const generateSubmit = document.querySelector('.generate-submit').addEventListener("click",()=>{
+document.querySelector('.generate-submit').addEventListener("click",()=>{
     if(parseInt(generateRows.value) > 0 && parseInt(generateCols.value) > 0){
         generateTable(parseInt(generateRows.value),parseInt(generateCols.value))
     }
@@ -31,28 +31,48 @@ const generateTable = function(rowsQty, colsQty){
         tbody.appendChild(tr)
     }   
     if(main.childElementCount === 0){
-        return main.appendChild(table) 
+        main.appendChild(table) 
+        return localStorage.setItem('table', main.innerHTML) //SAVE TABLE IN LOCAL STORAGE
     } else {
         main.innerHTML = ''
-        return main.appendChild(table)
+        main.appendChild(table)
+        return localStorage.setItem('table', main.innerHTML) //SAVE TABLE IN LOCAL STORAGE
     }
 }
 
-//******* DELETE TABLE *******//
+//DELETE TABLE
 const deleteTable = document.querySelector(".delete-table")
-deleteTable.addEventListener('click',()=>main.innerHTML = '')
+deleteTable.addEventListener('click',()=>{
+    main.innerHTML = ''
+    localStorage.setItem('table', main.innerHTML)
+})
 
-//******* EXPORT TABLE TO PDF *******//
+//GET TABLE FROM LOCAL STORAGE
+let saved = localStorage.getItem('table');
+if (saved) {
+	main.innerHTML = saved;
+}
 
-//******* SAVE TABLE IN LOCAL STORAGE *******//
+//EXPORT TABLE TO PDF
+document.querySelector(".export-table").addEventListener('click',genPDF)
+function genPDF() {
+        const doc = new jsPDF('l')
+        doc.fromHTML(main)
+        doc.save('Test.pdf')
+    }
+    //******* FIX: PDF CUTS LAST ROW *******//
 
 //******* MOVING ON TABLE USING KEYS *******//
 
 //******* USE RMB TO OPEN OPTION TABLE *******//
+    //******* OPTION FOR CHANGING BACKGROUND COLOR *******//
+    //******* OPTION FOR CHANGING TEXT COLOR *******//
+    //******* OPTION FOR SPAN COLS *******//
+    //******* OPTION FOR SPAN ROWS *******//
+    //******* OPTION TO ADD EXCERCISE FROM LIST *******//
 
 //******* FIX BOTTOM BORDER ON TABLE *******//
 
 //******* CREATE SMALL BUTTON FOR ADDING ONE ADDITIONAL ROW AND ONE FOR COL *******//
 
 //******* CREATE SMALL BUTTON FOR DELETE ONE ROW AND ONE FOR DELTE ONE COL *******//
-
