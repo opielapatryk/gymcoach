@@ -4,7 +4,6 @@
     font-family: Roboto, sans-serif;
     margin: 0;
     padding: 0;
-    letter-spacing: .2em;
     box-sizing: border-box;
 }
 
@@ -30,10 +29,13 @@ div {
     height: 100px;
     z-index: 10;
 }
-
+div:hover .ul{
+    display: block;
+}
 .h1 {
     text-align: center;
     cursor: pointer;
+    letter-spacing: .2em;
 }
 
 .ul {

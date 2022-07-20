@@ -1,10 +1,10 @@
-//NAVIGATION MENU
-const h1 = document.querySelectorAll('.h1')
-h1.forEach((e)=>{
-    e.addEventListener('click',()=>{
-        e.nextSibling.nextSibling.style.display !== 'block' ? e.nextSibling.nextSibling.style.display = 'block' : e.nextSibling.nextSibling.style.display = 'none'
-    })
-})
+// //NAVIGATION MENU
+// const h1 = document.querySelectorAll('.h1')
+// h1.forEach((e)=>{
+//     e.addEventListener('click',()=>{
+//         e.nextSibling.nextSibling.style.display !== 'block' ? e.nextSibling.nextSibling.style.display = 'block' : e.nextSibling.nextSibling.style.display = 'none'
+//     })
+// })
 //GENERATE TABLE 
 //consts
 const main = document.querySelector('main')
@@ -59,22 +59,94 @@ if (saved) {
 document.querySelector(".export-table").addEventListener('click',genPDF)
 function genPDF() {
         const doc = new jsPDF('l')
-        doc.fromHTML(main)
+        doc.fromHTML(main,{'width':1500})
         doc.save('Test.pdf')
     }
-    //******* FIX: PDF CUTS LAST ROW *******//
-
-//******* MOVING ON TABLE USING KEYS *******//
-let active = 0;
-document.querySelectorAll('td').forEach((e)=>{
-    e.addEventListener('click',()=>{
-        console.log(e.cellIndex) //log index of cell in row
-    })
-})
-
-
+    //******* FIX: UGLY STYLES OF PDF *******//
 
 //******* CUSTOM CONTEXT MENU *******//
     //******* OPTION FOR CHANGING BACKGROUND COLOR *******//
     //******* OPTION FOR CHANGING TEXT COLOR *******//
     //******* OPTION TO ADD EXCERCISE FROM LIST *******//
+
+
+//******* MOVING ON TABLE USING KEYS *******//
+    //******* MAKE CELL ACTIVE WHILE USING KEYS OR LMB *******//
+
+let rowindex = 0
+let cellindex = 0
+let rowlength = 0
+let celllength = 0
+document.querySelectorAll('tr').forEach((e)=>{
+    e.addEventListener('click',()=>{
+        rowindex = e.rowIndex //set index of row
+    })
+})
+document.querySelectorAll('td').forEach((e)=>{
+    e.addEventListener('click',()=>{
+        cellindex = e.cellIndex //set index of cell in row
+    })
+})
+rowwws = document.querySelectorAll('tr')
+document.addEventListener('keydown',(event)=>{
+    rowlength = document.querySelectorAll('tr').length - 1
+    rowwws.forEach((e) => celllength = e.children.length - 1)
+    switch (event.key) {
+        case "ArrowLeft":
+            rowwws.forEach((e)=>{
+                for(let i = 0;i<e.children.length;i++){
+                    e.children[i].style.backgroundColor = 'white'
+                }
+            })
+            // Left pressed
+            if(cellindex > 0){
+                cellindex--
+            } else {
+                cellindex = celllength
+            }
+            break;
+        case "ArrowRight":
+            rowwws.forEach((e)=>{
+                for(let i = 0;i<e.children.length;i++){
+                    e.children[i].style.backgroundColor = 'white'
+                }
+            })
+            if(cellindex < celllength){
+                cellindex++
+            } else {
+                cellindex = 0
+            }
+            break;
+            // Right pressed
+        case "ArrowUp":
+            rowwws.forEach((e)=>{
+                for(let i = 0;i<e.children.length;i++){
+                    e.children[i].style.backgroundColor = 'white'
+                }
+            })
+            if(rowindex > 0){
+                rowindex--
+            } else {
+                rowindex = rowlength
+            }
+            break;
+            // Up pressed
+        case "ArrowDown":
+            rowwws.forEach((e)=>{
+                for(let i = 0;i<e.children.length;i++){
+                    e.children[i].style.backgroundColor = 'white'
+                }
+            })
+            if(rowindex < rowlength){
+                rowindex++
+            } else {
+                rowindex = 0
+            }
+            break;
+    }
+    rowwws[rowindex].children[cellindex].style.backgroundColor = `blue` //select cell
+    
+})
+//******* DRAG & DROP EXCERCISE FROM MENU TO CELL *******//
+
+//******* FIX STYLES ON copy&paste exc from menu  *******// 
