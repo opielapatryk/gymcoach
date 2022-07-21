@@ -15,7 +15,7 @@ document.querySelector('.generate-submit').addEventListener("click",()=>{
         generateTable(parseInt(generateRows.value),parseInt(generateCols.value))
     }
 })
-
+//xd
 //generate table function
 const generateTable = function(rowsQty, colsQty){
     const table = document.createElement('table')
