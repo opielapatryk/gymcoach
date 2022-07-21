@@ -54,7 +54,13 @@ div:hover .ul{
 li {
     border-bottom: 1px black solid;
 }
-
+.move{
+    cursor: move;
+}
+.afterdrag{
+    color: black;
+    list-style: none;
+}
 .scroll-ul::-webkit-scrollbar {
     width: 10px;
 }
@@ -102,7 +108,10 @@ th {
 td {
     width: 9vw;
     height: 1vw;
+    line-height: 1vw;
     border: 1px solid;
+    overflow:hidden;
+    background-color: white;
 }
 
 tr {

@@ -26,7 +26,7 @@ const generateTable = function(rowsQty, colsQty){
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
             tr.appendChild(td)
-            td.innerHTML = '<p contenteditable="true"></p>' //EDIT TABLE CELL
+            td.setAttribute('contenteditable','true') //EDIT TABLE CELL
         }
         tbody.appendChild(tr)
     }   
@@ -95,7 +95,7 @@ document.addEventListener('keydown',(event)=>{
         case "ArrowLeft":
             rowwws.forEach((e)=>{
                 for(let i = 0;i<e.children.length;i++){
-                    e.children[i].style.backgroundColor = 'white'
+                    e.children[i].style.border = `1px solid black`
                 }
             })
             // Left pressed
@@ -108,7 +108,7 @@ document.addEventListener('keydown',(event)=>{
         case "ArrowRight":
             rowwws.forEach((e)=>{
                 for(let i = 0;i<e.children.length;i++){
-                    e.children[i].style.backgroundColor = 'white'
+                    e.children[i].style.border = `1px solid black`
                 }
             })
             if(cellindex < celllength){
@@ -121,7 +121,7 @@ document.addEventListener('keydown',(event)=>{
         case "ArrowUp":
             rowwws.forEach((e)=>{
                 for(let i = 0;i<e.children.length;i++){
-                    e.children[i].style.backgroundColor = 'white'
+                    e.children[i].style.border = `1px solid black`
                 }
             })
             if(rowindex > 0){
@@ -134,7 +134,7 @@ document.addEventListener('keydown',(event)=>{
         case "ArrowDown":
             rowwws.forEach((e)=>{
                 for(let i = 0;i<e.children.length;i++){
-                    e.children[i].style.backgroundColor = 'white'
+                    e.children[i].style.border = `1px solid black`
                 }
             })
             if(rowindex < rowlength){
@@ -144,9 +144,28 @@ document.addEventListener('keydown',(event)=>{
             }
             break;
     }
-    rowwws[rowindex].children[cellindex].style.backgroundColor = `blue` //select cell
+    rowwws[rowindex].children[cellindex].style.border = `2px solid black` //select cell
     
 })
-//******* DRAG & DROP EXCERCISE FROM MENU TO CELL *******//
+//DRAG & DROP EXCERCISE FROM MENU TO CELL
+    const td = document.querySelectorAll('td')
+    const li = document.querySelectorAll('li')
+    li.forEach(item =>{
+        item.addEventListener('dragstart',()=>{
+            item.classList.add('draging')
+            item.classList.add('afterdrag')
+        })
+        item.addEventListener('dragend',()=>{
+            item.classList.remove('draging')
+            item.classList.remove('move')
+        })
+    })
 
+    td.forEach(cell =>{
+        cell.addEventListener('dragover',e =>{
+            e.preventDefault()
+            const dragable = document.querySelector('.draging')
+            cell.appendChild(dragable)
+        })
+    })
 //******* FIX STYLES ON copy&paste exc from menu  *******// 
