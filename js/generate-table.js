@@ -1,4 +1,5 @@
-export const generateTable = function(rowsQty, colsQty){
+import {main} from './main.js'
+export default function(rowsQty, colsQty){
     const table = document.createElement('table')
     const tbody = document.createElement('tbody')
     table.appendChild(tbody)
@@ -18,4 +19,3 @@ export const generateTable = function(rowsQty, colsQty){
         return main.appendChild(table) 
     }
 }
-//xd

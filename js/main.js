@@ -1,6 +1,7 @@
 //GENERATE TABLE 
 //consts
 const main = document.querySelector('main')
+export {main}
 const generateRows = document.querySelector('.generate-rows')
 const generateCols = document.querySelector('.generate-cols')
 document.querySelector('.generate-submit').addEventListener("click",()=>{
@@ -9,9 +10,7 @@ document.querySelector('.generate-submit').addEventListener("click",()=>{
     }
 })
 //generate table function
-import generateTable from './js/generate-table.js'
-//https://javascript.plainenglish.io/deploying-a-localhost-server-with-node-js-and-express-js-58775f098407
-
+import generateTable from './generate-table.js'
 
 //DELETE TABLE
 const deleteTable = document.querySelector(".delete-table")
@@ -62,7 +61,7 @@ document.querySelectorAll('td').forEach((e)=>{
         cellindex = e.cellIndex //set index of cell in row
     })
 })
-rowwws = document.querySelectorAll('tr')
+const rowwws = document.querySelectorAll('tr')
 document.addEventListener('keydown',(event)=>{
     rowlength = document.querySelectorAll('tr').length - 1
     rowwws.forEach((e) => celllength = e.children.length - 1)
