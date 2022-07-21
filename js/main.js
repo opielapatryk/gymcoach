@@ -15,7 +15,6 @@ document.querySelector('.generate-submit').addEventListener("click",()=>{
         generateTable(parseInt(generateRows.value),parseInt(generateCols.value))
     }
 })
-//xd
 //generate table function
 const generateTable = function(rowsQty, colsQty){
     const table = document.createElement('table')
@@ -26,8 +25,7 @@ const generateTable = function(rowsQty, colsQty){
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
             tr.appendChild(td)
-            const input = document.createElement('input')
-            td.appendChild(input) //EDIT TABLE CELL
+            td.setAttribute('contenteditable','true')//EDIT TABLE CELL
         }
         tbody.appendChild(tr)
     }   
