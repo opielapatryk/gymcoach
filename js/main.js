@@ -26,7 +26,8 @@ const generateTable = function(rowsQty, colsQty){
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
             tr.appendChild(td)
-            td.setAttribute('contenteditable','true') //EDIT TABLE CELL
+            const input = document.createElement('input')
+            td.appendChild(input) //EDIT TABLE CELL
         }
         tbody.appendChild(tr)
     }   
@@ -145,7 +146,7 @@ document.addEventListener('keydown',(event)=>{
             break;
     }
     rowwws[rowindex].children[cellindex].style.border = `2px solid black` //select cell
-    
+    rowwws[rowindex].children[cellindex].focus()
 })
 //DRAG & DROP EXCERCISE FROM MENU TO CELL
     const td = document.querySelectorAll('td')
@@ -165,7 +166,12 @@ document.addEventListener('keydown',(event)=>{
         cell.addEventListener('dragover',e =>{
             e.preventDefault()
             const dragable = document.querySelector('.draging')
-            cell.appendChild(dragable)
+            if(cell.contains(dragable)){
+                cell.replaceChild(dragable,dragable)
+            } else{
+                cell.appendChild(dragable)
+            }
+            
         })
     })
 //******* FIX STYLES ON copy&paste exc from menu  *******// 
