@@ -10,6 +10,7 @@ document.querySelector('.generate-submit').addEventListener("click",()=>{
 })
 //generate table function
 import generateTable from './js/generate-table.js'
+//https://javascript.plainenglish.io/deploying-a-localhost-server-with-node-js-and-express-js-58775f098407
 
 
 //DELETE TABLE
