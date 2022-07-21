@@ -9,7 +9,7 @@ document.querySelector('.generate-submit').addEventListener("click",()=>{
     }
 })
 //generate table function
-import generateTable from './generate-table'
+import generateTable from './js/generate-table.js'
 
 
 //DELETE TABLE
