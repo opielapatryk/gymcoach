@@ -18,3 +18,4 @@ export const generateTable = function(rowsQty, colsQty){
         return main.appendChild(table) 
     }
 }
+//xd
