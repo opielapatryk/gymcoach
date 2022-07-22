@@ -1,6 +1,4 @@
-//******* MOVING ON TABLE USING KEYS *******//
-    //******* MAKE CELL ACTIVE WHILE USING KEYS OR LMB *******//
-
+//MOVING ON TABLE USING KEYS
     let rowindex = 0
     let cellindex = 0
     let rowlength = 0
