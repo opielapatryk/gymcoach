@@ -1,1 +1,7 @@
-1. Table dont work until refresh page
+1. Arrow keys and drag&drop dont work until page refresh
+2. Write context menu functionality
+3. Weird problem with export to pdf, some cell are exported some are not
+4. Cant write how many rows/cols you want to generate when arrow keys works
+5. Write more excercises
+6. Some excercises dont fit in cells
+7. Clean up the code
