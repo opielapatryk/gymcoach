@@ -1,5 +1,3 @@
-const main = document.querySelector('main')
-
 //EXPORT TABLE TO PDF
 document.querySelector(".export-table").addEventListener('click',genPDF)
 function genPDF() {

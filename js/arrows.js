@@ -1,5 +1,6 @@
 //MOVING ON TABLE USING KEYS
-    let rowindex = 0
+if(main.childElementCount === 1){
+let rowindex = 0
     let cellindex = 0
     let rowlength = 0
     let celllength = 0
@@ -21,7 +22,7 @@
             case "ArrowLeft":
                 rowwws.forEach((e)=>{
                     for(let i = 0;i<e.children.length;i++){
-                        e.children[i].style.border = `1px solid black`
+                        e.children[i].classList.remove('border')
                     }
                 })
                 // Left pressed
@@ -34,7 +35,7 @@
             case "ArrowRight":
                 rowwws.forEach((e)=>{
                     for(let i = 0;i<e.children.length;i++){
-                        e.children[i].style.border = `1px solid black`
+                        e.children[i].classList.remove('border')
                     }
                 })
                 if(cellindex < celllength){
@@ -47,7 +48,7 @@
             case "ArrowUp":
                 rowwws.forEach((e)=>{
                     for(let i = 0;i<e.children.length;i++){
-                        e.children[i].style.border = `1px solid black`
+                        e.children[i].classList.remove('border')
                     }
                 })
                 if(rowindex > 0){
@@ -60,7 +61,7 @@
             case "ArrowDown":
                 rowwws.forEach((e)=>{
                     for(let i = 0;i<e.children.length;i++){
-                        e.children[i].style.border = `1px solid black`
+                        e.children[i].classList.remove('border')
                     }
                 })
                 if(rowindex < rowlength){
@@ -70,6 +71,8 @@
                 }
                 break;
         }
-        rowwws[rowindex].children[cellindex].style.border = `2px solid black` //select cell
+        rowwws[rowindex].children[cellindex].classList.add('border') //select cell
         rowwws[rowindex].children[cellindex].focus()
     })
+}
+    

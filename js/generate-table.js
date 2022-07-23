@@ -1,11 +1,6 @@
-const main = document.querySelector('main')
 const generateRows = document.querySelector('.generate-rows')
 const generateCols = document.querySelector('.generate-cols')
-document.querySelector('.generate-submit').addEventListener("click",()=>{
-    if(parseInt(generateRows.value) > 0 && parseInt(generateCols.value) > 0){
-        generateTable(parseInt(generateRows.value),parseInt(generateCols.value))
-    }
-})
+
 function generateTable(rowsQty, colsQty){
     const table = document.createElement('table')
     const tbody = document.createElement('tbody')
@@ -23,6 +18,17 @@ function generateTable(rowsQty, colsQty){
         return main.appendChild(table) 
     } else {
         main.innerHTML = ''
-        return main.appendChild(table) 
+        return main.appendChild(table)
     }
+    
 }
+
+document.querySelector('.generate-submit').addEventListener("click",()=>{
+    if(parseInt(generateRows.value) > 0 && parseInt(generateCols.value) > 0){
+        generateTable(parseInt(generateRows.value),parseInt(generateCols.value))
+    }
+    setTimeout(() => {
+        window.location.reload()
+    }, 300);
+})
+
