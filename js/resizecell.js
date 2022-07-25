@@ -1,12 +1,13 @@
 let largest = 5
+let newlargest
 document.addEventListener('keydown',()=>{
         td.forEach(element => {
             if(element.innerText.length>largest){
-                largest = element.innerText.length
+                newlargest = element.innerText.length
             }
         setTimeout(() => {
             td.forEach(e=>{
-                e.style.width = `${largest*0.7}em` 
+                e.style.width = `${newlargest*0.7}em` 
             })
         }, 1000);
     })

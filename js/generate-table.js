@@ -10,7 +10,8 @@ function generateTable(rowsQty, colsQty){
         for(let j = 0; j < colsQty; j++){
             const td = document.createElement('td')
             tr.appendChild(td)
-            td.setAttribute('contenteditable','true')//EDIT TABLE CELL
+            td.setAttribute('contenteditable','true')
+            td.setAttribute('spellcheck','false')//EDIT TABLE CELL
         }
         tbody.appendChild(tr)
     }   

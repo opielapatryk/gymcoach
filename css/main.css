@@ -14,7 +14,10 @@ body {
     background: linear-gradient(to right, rgb(233, 235, 255), rgb(224, 255, 224));
     
 }
-
+main{
+    overflow:auto;
+    max-width: 100vw;
+}
 /* nav */
 nav {
     height: 100px;
