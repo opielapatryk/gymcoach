@@ -29,6 +29,6 @@ document.querySelector('.generate-submit').addEventListener("click",()=>{
     }
     setTimeout(() => {
         window.location.reload()
-    }, 300);
+    }, 1000);
 })
 

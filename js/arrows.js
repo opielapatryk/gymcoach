@@ -15,7 +15,7 @@ let rowindex = 0
         })
     })
     const rowwws = document.querySelectorAll('tr')
-    document.addEventListener('keydown',(event)=>{
+    main.addEventListener('keydown',(event)=>{
         rowlength = document.querySelectorAll('tr').length - 1
         rowwws.forEach((e) => celllength = e.children.length - 1)
         switch (event.key) {
