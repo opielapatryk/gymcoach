@@ -20,7 +20,6 @@ td.forEach(cell =>{
             cell.replaceChild(dragable,dragable)
         } else{
             cell.appendChild(dragable)
-        }
-        
+        }      
     })
 })

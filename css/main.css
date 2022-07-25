@@ -108,6 +108,7 @@ th {
 
 td {
     width: 9vw;
+    padding: .2em 0 .2em 0;
     height: 1em;
     line-height: 1vw;
     border: 1px solid;
