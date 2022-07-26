@@ -21,5 +21,6 @@ td.forEach(cell =>{
         } else{
             cell.appendChild(dragable)
         }      
+        resizeCell()
     })
 })
