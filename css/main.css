@@ -222,3 +222,12 @@ li:hover{
 .border{
     border: 2px black solid;
 }
+
+.color{
+    border: none;
+    width: 50px;
+    height: 20px;
+}
+.selectcolor{
+    display: none;
+}

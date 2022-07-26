@@ -1,4 +1,12 @@
 1. Write context menu functionality
-2. Weird problem with export to pdf, some cell are exported some are not
-3. Create storage for previous workout plans with date of last workout
-4. Create button to open small window with previous workout plans with sorting from oldest 
+2. Change background color of target cell
+3. Change text color of target cell
+4. Change font size of cells
+5. Make pointing out all of cells possible, using lmb on swipe
+
+6. Weird problem with export to pdf, some cell are exported some are not
+
+7. Create storage for previous workout plans with date of last workout
+8. Create button to open small window with previous workout plans with sorting from oldest 
+
+9. Fix when u click on cell, cell shoud be focused
