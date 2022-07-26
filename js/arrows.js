@@ -73,6 +73,14 @@ let rowindex = 0
         }
         rowwws[rowindex].children[cellindex].classList.add('border') //select cell
         rowwws[rowindex].children[cellindex].focus()
+        focusedcell = rowwws[rowindex].children[cellindex]
     })
 }
-    
+main.addEventListener('click',(e)=>{
+    td.forEach((e)=>{
+        e.classList.remove('border')
+    })
+    e.target.classList.add('border')
+    focusedcell = e.target
+})
+let focusedcell
