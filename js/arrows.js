@@ -1,5 +1,5 @@
 //MOVING ON TABLE USING KEYS
-if(main.childElementCount === 1){
+if(main.childElementCount === 1){   
 let rowindex = 0
     let cellindex = 0
     let rowlength = 0

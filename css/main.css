@@ -11,7 +11,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, rgb(233, 235, 255), rgb(224, 255, 224));
+    background: linear-gradient(to right, rgb(195, 200, 255), rgb(183, 255, 183));
     
 }
 main{
@@ -116,6 +116,7 @@ td {
     border: 1px solid;
     overflow:hidden;
     background-color: white;
+    font-size: 16px;
 }
 
 tr {

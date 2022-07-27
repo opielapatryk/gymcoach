@@ -3,7 +3,7 @@ const body = document.querySelector('body')
 const nav = document.querySelector('nav')
 document.addEventListener('DOMContentLoaded', ()=>{
     if(localStorage.getItem('mode') == 'light'){
-            body.style.background = 'linear-gradient(to right, rgb(233, 235, 255), rgb(224, 255, 224))'
+            body.style.background = 'linear-gradient(to right, rgb(195, 200, 255), rgb(183, 255, 183))'
             nav.style.boxShadow = '#b9d0ff 0 0 100px 5px'
             nav.style.background = 'linear-gradient(to right, rgb(0, 115, 255), green)'
             darkmode.style.color = 'white'
