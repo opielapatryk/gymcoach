@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             nav.style.boxShadow = '#06193e 0 0 100px 5px'
             nav.style.background = 'linear-gradient(to right, rgb(0, 43, 95), rgb(0, 71, 0))'
             darkmode.style.color = 'black'
+            colorcontainer.style.color = 'white'
         }
 })
 

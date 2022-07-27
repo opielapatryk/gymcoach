@@ -80,7 +80,10 @@ main.addEventListener('click',(e)=>{
     td.forEach((e)=>{
         e.classList.remove('border')
     })
-    e.target.classList.add('border')
-    focusedcell = e.target
+    if(e.target === td){
+        e.target.classList.add('border')
+            focusedcell = e.target
+    }
+    
 })
 let focusedcell

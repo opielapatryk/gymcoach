@@ -26,7 +26,6 @@ item[1].addEventListener("click",(e)=>{
         td.forEach(element => {
             element.style.background = color.value
         });
-        colorcontainer.style.display = 'none'
     });
 })
 

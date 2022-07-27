@@ -1,16 +1,16 @@
 let largest = 5
-let newlargest
 document.addEventListener('keydown',resizeCell)
 
 function resizeCell() {
     td.forEach(element => {
         if(element.innerText.length>largest){
-            newlargest = element.innerText.length
+            largest = element.innerText.length
         }
     setTimeout(() => {
         td.forEach(e=>{
-            e.style.width = `${newlargest*0.7}em` 
+            e.style.width = `${largest*0.4}rem` 
         })
-    }, 1000);
+    }, 1000);  
 })
 }
+
