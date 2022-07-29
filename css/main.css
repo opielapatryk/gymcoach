@@ -129,6 +129,7 @@ button {
     background: white;
     padding: .2em;
     margin-top: 1em;
+    border: none;
     cursor: pointer;
 }
 
