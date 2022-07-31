@@ -257,3 +257,15 @@ li:hover{
     }
     
 }
+
+.add-input{
+    width: 30vh;
+    height: 6vh;
+    transform: translate(calc(50vw - 20vh), 40vh);
+    /* display: none; */
+    box-sizing:content-box;
+    padding: 3em;
+    position: absolute;
+    background-color: whitesmoke;
+    box-shadow: #333 0px 0px 10px 5px;
+}

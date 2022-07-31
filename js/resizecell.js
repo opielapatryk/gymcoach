@@ -11,7 +11,6 @@ function resizeCell() {
     setTimeout(() => {
         td.forEach(e=>{
             e.style.width = `${largest*.5}em` 
-            console.log(largestelement);
         })
     }, 1000);  
 })

@@ -12,12 +12,13 @@
     <script src="./js/arrows.js" defer></script>
     <script src="./js/generate-table.js" defer></script>
     <script src="./js/darkmode.js" defer></script>
+    <script src="./js/addexc.js" defer></script>
     <script src="./js/resizecell.js" defer></script>
     <script src="./js/contentmenu.js" defer></script>
     <script src="./js/contextmenufunctons.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.2/jspdf.min.js"></script>
     <script src="https://kit.fontawesome.com/507a0b9e94.js" crossorigin="anonymous"></script>
-    <link rel="icon" href="../2996761.png" type="image/icon type">
+    <link rel="icon" href="./2996761.png" type="image/icon type">
     <title>MyGymNote Beta v1</title>
 </head>
 <body>
@@ -44,8 +45,8 @@
             <div class="container">
                 <div class="h1">Chest</div>
                 <div class="icons">
-                    <i class="fa">&#xf067;</i>
-                    <i class="fa">&#xf068;</i>
+                    <i class="fa add">&#xf067;</i>
+                    <i class="fa del">&#xf068;</i>
                 </div>
             </div>
             
@@ -77,8 +78,8 @@
             <div class="container">
                 <div class="h1">Back</div>
                 <div class="icons">
-                    <i class="fa">&#xf067;</i>
-                    <i class="fa">&#xf068;</i>
+                    <i class="fa add">&#xf067;</i>
+                    <i class="fa del">&#xf068;</i>
                 </div>
             </div>
             <ul class="ul scroll-ul">
@@ -110,8 +111,8 @@
             <div class="container">
                 <div class="h1">Arms</div>
                 <div class="icons">
-                    <i class="fa">&#xf067;</i>
-                    <i class="fa">&#xf068;</i>
+                    <i class="fa add">&#xf067;</i>
+                    <i class="fa del">&#xf068;</i>
                 </div>
             </div>
             <ul class="ul scroll-ul">
@@ -138,8 +139,8 @@
             <div class="container">
                 <div class="h1">Shoulders</div>
                 <div class="icons">
-                    <i class="fa">&#xf067;</i>
-                    <i class="fa">&#xf068;</i>
+                    <i class="fa add">&#xf067;</i>
+                    <i class="fa del">&#xf068;</i>
                 </div>
             </div>
             <ul class="ul scroll-ul">
@@ -163,8 +164,8 @@
             <div class="container">
                 <div class="h1">Legs</div>
                 <div class="icons">
-                    <i class="fa">&#xf067;</i>
-                    <i class="fa">&#xf068;</i>
+                    <i class="fa add">&#xf067;</i>
+                    <i class="fa del">&#xf068;</i>
                 </div>
             </div>
             <ul class="ul scroll-ul">
@@ -208,5 +209,9 @@
         </export>
         
     </section>
+    <div class="add-input">
+        <input type="text" style="width:100%;text-align: left; padding-left: 1em;" id="addexc">
+        <input type="submit" value="Add!" style="letter-spacing: .1em; width:50%;" id="subaddexc">
+    </div>
 </body>
 </html>
