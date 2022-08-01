@@ -61,7 +61,6 @@ i {
     overflow: auto;
     height: 200%;
     width: 100%;
-    text-align: center;
     background-color: rgba(255, 255, 255, 0.5);
     font-size: 1vw;
     line-height: 5vw;
@@ -71,7 +70,7 @@ i {
 
 li {
     background-color: white;
-    
+    padding-left: 2em;
 }
 
 @keyframes hejt {
@@ -276,7 +275,6 @@ li:hover{
     background-color: whitesmoke;
     box-shadow: #333 0px 0px 10px 5px;
 }
-
 @keyframes animate {
     from{width: 10px;
     }
@@ -284,3 +282,6 @@ li:hover{
     to {
         width: 30vh;}
 }
+
+.del-icon{
+visibility: hidden;}
