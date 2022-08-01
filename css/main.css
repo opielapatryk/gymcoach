@@ -11,8 +11,7 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to right, rgb(195, 200, 255), rgb(183, 255, 183));
-    
+    background: linear-gradient(to right, rgb(195, 200, 255), rgb(183, 255, 183));   
 }
 main{
     overflow:auto;
