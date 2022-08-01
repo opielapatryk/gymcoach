@@ -67,10 +67,17 @@ i {
     font-size: 1vw;
     line-height: 5vw;
     letter-spacing: 0;
+    animation: hejt .3s;
 }
 
 li {
     background-color: white;
+    
+}
+
+@keyframes hejt {
+    from{height: 10px;}
+    to{height: 200%;}
 }
 
 .move{
