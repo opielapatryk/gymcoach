@@ -263,9 +263,18 @@ li:hover{
     height: 6vh;
     transform: translate(calc(50vw - 20vh), 40vh);
     display: none;
+    animation: animate 1s;
     box-sizing:content-box;
     padding: 3em;
     position: absolute;
     background-color: whitesmoke;
     box-shadow: #333 0px 0px 10px 5px;
+}
+
+@keyframes animate {
+    from{width: 10px;
+    }
+    
+    to {
+        width: 30vh;}
 }
