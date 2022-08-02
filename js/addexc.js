@@ -35,8 +35,8 @@ add[4].addEventListener('click', ()=>{
 subaddexc.addEventListener('click', ()=>{
     let newchild = document.createElement('li')
     newchild.setAttribute('draggable', 'true')
+    newchild.innerHTML = `<i class="fa fa-trash-o del-icon"></i> ${addexcinput.value}`
     newchild.classList.add('move')
-    newchild.innerText = addexcinput.value
     add[lista].parentElement.parentElement.nextSibling.nextSibling.appendChild(newchild)
     localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML)
     addinput.style.display = 'none'
@@ -75,37 +75,72 @@ delIcon.forEach(e=>{
 })
 
 del[0].addEventListener('click', ()=>{
-    for(let i = 0; i<del[0].parentElement.parentElement.nextElementSibling.children.length;i++){
-            del[0].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
-        }  
     lista = 0 
     listname = 'chestlist'
+    for(let i = 0; i<del[0].parentElement.parentElement.nextElementSibling.children.length;i++){
+        del[0].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        del[0].parentElement.parentElement.nextElementSibling.children[i].firstChild.addEventListener('click',(e)=>{
+            e.target.parentElement.remove()
+            delIcon.forEach(el=>{
+                el.style.visibility='hidden'
+            })
+            localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML) 
+        })
+    }  
 })
 del[1].addEventListener('click', ()=>{
     for(let i = 0; i<del[1].parentElement.parentElement.nextElementSibling.children.length;i++){
-            del[1].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
-        }  
+        del[1].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        del[1].parentElement.parentElement.nextElementSibling.children[i].firstChild.addEventListener('click',(e)=>{
+            e.target.parentElement.remove()
+            delIcon.forEach(el=>{
+                el.style.visibility='hidden'
+            })
+            localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML) 
+        })
+    }  
     lista = 1 
     listname = 'backlist'
 })
 del[2].addEventListener('click', ()=>{
     for(let i = 0; i<del[2].parentElement.parentElement.nextElementSibling.children.length;i++){
-            del[2].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
-        }  
+        del[2].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        del[2].parentElement.parentElement.nextElementSibling.children[i].firstChild.addEventListener('click',(e)=>{
+            e.target.parentElement.remove()
+            delIcon.forEach(el=>{
+                el.style.visibility='hidden'
+            })
+            localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML) 
+        })
+    }  
     lista = 2 
     listname = 'armlist'
 })
 del[3].addEventListener('click', ()=>{
     for(let i = 0; i<del[3].parentElement.parentElement.nextElementSibling.children.length;i++){
-            del[3].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
-        }  
+        del[3].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        del[3].parentElement.parentElement.nextElementSibling.children[i].firstChild.addEventListener('click',(e)=>{
+            e.target.parentElement.remove()
+            delIcon.forEach(el=>{
+                el.style.visibility='hidden'
+            })
+            localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML) 
+        })
+    }  
     lista = 3 
     listname = 'shoulderlist'
 })
 del[4].addEventListener('click', ()=>{
     for(let i = 0; i<del[4].parentElement.parentElement.nextElementSibling.children.length;i++){
-            del[4].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
-        }  
+        del[4].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        del[4].parentElement.parentElement.nextElementSibling.children[i].firstChild.addEventListener('click',(e)=>{
+            e.target.parentElement.remove()
+            delIcon.forEach(el=>{
+                el.style.visibility='hidden'
+            })
+            localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML) 
+        })
+    }   
     lista = 4 
     listname = 'leglist'
 })
