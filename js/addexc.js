@@ -1,5 +1,6 @@
 const add = document.querySelectorAll('.add')
 const del = document.querySelectorAll('.del')
+let delIcon = document.querySelectorAll('.del-icon')
 const addinput = document.querySelector('.add-input')
 const addexcinput = document.querySelector('#addexc')
 const subaddexc = document.querySelector('#subaddexc')
@@ -61,3 +62,50 @@ let leglist = localStorage.getItem('leglist')
 if(leglist){
     add[4].parentElement.parentElement.nextSibling.nextSibling.innerHTML = leglist
 }
+
+delIcon.forEach(e=>{
+    e.addEventListener('click',(e)=>{
+        e.target.parentElement.remove()
+        delIcon.forEach(el=>{
+            el.style.visibility='hidden'
+        })
+        localStorage.setItem(listname, add[lista].parentElement.parentElement.nextSibling.nextSibling.innerHTML)
+        
+    })
+})
+
+del[0].addEventListener('click', ()=>{
+    for(let i = 0; i<del[0].parentElement.parentElement.nextElementSibling.children.length;i++){
+            del[0].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        }  
+    lista = 0 
+    listname = 'chestlist'
+})
+del[1].addEventListener('click', ()=>{
+    for(let i = 0; i<del[1].parentElement.parentElement.nextElementSibling.children.length;i++){
+            del[1].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        }  
+    lista = 1 
+    listname = 'backlist'
+})
+del[2].addEventListener('click', ()=>{
+    for(let i = 0; i<del[2].parentElement.parentElement.nextElementSibling.children.length;i++){
+            del[2].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        }  
+    lista = 2 
+    listname = 'armlist'
+})
+del[3].addEventListener('click', ()=>{
+    for(let i = 0; i<del[3].parentElement.parentElement.nextElementSibling.children.length;i++){
+            del[3].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        }  
+    lista = 3 
+    listname = 'shoulderlist'
+})
+del[4].addEventListener('click', ()=>{
+    for(let i = 0; i<del[4].parentElement.parentElement.nextElementSibling.children.length;i++){
+            del[4].parentElement.parentElement.nextElementSibling.children[i].firstChild.style.visibility='visible'
+        }  
+    lista = 4 
+    listname = 'leglist'
+})
