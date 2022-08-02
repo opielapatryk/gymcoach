@@ -1,31 +1,18 @@
-let largest = 5
-// let largestelement
+let largest = 3
+let widthh
 document.addEventListener('keydown',resizeCell)
 
 function resizeCell() {
     td.forEach(element => {
-        if(element.innerText.length>largest){
-            // largestelement = element
-            largest = element.innerText.length
+        if(element.innerText.length>=largest){
+            element.style.width = 'max-content'
+            widthh = element.clientWidth
         }
     setTimeout(() => {
         td.forEach(e=>{
-            e.style.width = `${largest*.5}em` 
+            e.style.width = `${widthh}px`
         })
-    }, 1000);  
+    }, 1000);   
 })
 }
 document.addEventListener('DOMContentLoaded', resizeCell)
-// largestelement.addEventListener('keydown',(event)=>{
-//                 while(largest>5){
-//                     let KeyID = event.keyCode;
-//                     switch(KeyID)
-//                     {
-//                         case 8:
-//                         largest -= 1
-//                         break; 
-//                         default:
-//                         break;
-//                     }
-//                 }
-//             })   
