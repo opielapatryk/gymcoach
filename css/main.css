@@ -285,3 +285,31 @@ li:hover{
 
 .del-icon{
 visibility: hidden;}
+
+.quiz-link{
+    top:200px;
+    width: 1em;
+    right: 0;
+    position: fixed;
+    opacity: .3;
+    z-index: 100000;
+    box-shadow: #333 0px 0px 10px 5px;
+    background-color: whitesmoke;
+}
+.quiz-link:hover {
+    transition: opacity .5s;
+    opacity: 1;
+}
+
+.quiz-link button{
+    margin: 0;
+    background-color: whitesmoke;
+}
+
+.quiz-p{
+    display: none;
+}
+
+.quiz-p a{
+    text-decoration: none;
+}
