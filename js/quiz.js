@@ -15,32 +15,16 @@ let counter = 0
 answers.addEventListener('click',()=>{
     counter += 1
     question.innerHTML = questions[counter]
+    answers.innerHTML = answersList[0].join(' ')
 })
 
-const Answers = {
-    answerNo0: {
-        id:0,
-        options: ['Building muscles', 'Building strength']
-    },
-    answerNo1: {
-        id:1,
-        options: ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
-    },
-    answerNo2: {
-        id:2,
-        options: ['Less than 40kg', 'Less than 60kg', 'Less than 80kg', 'Less than 100kg']
-    },
-    answerNo3: {
-        id:3,
-        options: ['Less than 40kg', 'Less than 60kg', 'Less than 80kg', 'Less than 100kg']
-    },
-    answerNo4: {
-        id:4,
-        options: ['Less than 60kg', 'Less than 80kg', 'Less than 100kg', 'Less than 120kg']
-    },
-    answerNo5: {
-        id:5,
-        options: ['Less than 2', 'Less than 5', 'Less than 9', 'Less than 12']
-    }
-}
+const answersList = 
+    [
+        ['<button>Building muscles</button>', '<button>Building strength</button>'],
+        ['<button>Monday</button>','<button>Tuesday</button>','<button>Wednesday</button>','<button>Thursday</button>','<button>Friday</button>','<button>Saturday</button>','<button>Sunday</button>'],
+        ['<button>Less than 40kg</button>', '<button>Less than 60kg</button>', '<button>Less than 80kg</button>', '<button>Less than 100kg</button>'],
+        ['<button>Less than 40kg</button>', '<button>Less than 60kg</button>', '<button>Less than 80kg</button>', '<button>Less than 100kg</button>'],
+        ['<button>Less than 60kg</button>', '<button>Less than 80kg</button>', '<button>Less than 100kg</button>', '<button>Less than 120kg</button>'],
+        ['<button>Less than 2</button>', '<button>Less than 5</button>', '<button>Less than 9</button>', '<button>Less than 12</button>']
+    ]
 
